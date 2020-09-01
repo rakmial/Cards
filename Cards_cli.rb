@@ -14,7 +14,7 @@ until game_over do
   if choice == "count"
     puts "There are " + deck.count.to_s + " cards left in the deck."
   elsif choice == "draw"
-    puts "You draw a " + deck.draw.value + " and fork it to /dev/null"
+    puts "You draw a " + deck.draw.name + " and fork it to /dev/null"
   elsif choice == "shuffle"
     deck = deck.shuffle
     puts "You masterfully shuffle and bridge the cards, somehow"

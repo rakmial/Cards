@@ -40,3 +40,9 @@ describe("Deck") do
     expect(test_random).not_to(eq(test_nonrandom))
   end
 end
+
+describe("Hand") do
+  it('initializes with attr_accessor :current_hand, an array to store cards .draw(n) from Deck') do
+    expect(Hand.new.current_hand).to(eq([]))
+  end
+end
