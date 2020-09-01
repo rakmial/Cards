@@ -9,3 +9,7 @@ class Card
     @value = rank.to_s + suit
   end
 end
+
+class Deck
+
+end

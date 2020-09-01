@@ -1,5 +1,5 @@
 require('rspec')
-require('Card')
+require('Cards')
 
 describe("Card") do
   it('initializes with suit from ["H", "S", "C", "D"] and rank from [2..10,"J","Q","K","A"], \
@@ -9,3 +9,4 @@ describe("Card") do
     expect(Card.new(2,"H").value).to(eq("2H"))
   end
 end
+
