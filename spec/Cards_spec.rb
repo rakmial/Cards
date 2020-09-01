@@ -27,4 +27,14 @@ describe("Deck") do
       end
     end
   end
+  it('provides method .shuffle which randomizes the order of cards in deck') do
+    test_random = []
+    test_nonrandom = []
+    test_deck_1 = Deck.new.shuffle
+    test_deck_2 = Deck.new
+    52.times {test_random.append(test_deck_1.draw)}
+    52.times {test_nonrandom.append(test_deck_2.draw)}
+    expect(test_random).not_to(eq(test_nonrandom))
+  end
+
 end
