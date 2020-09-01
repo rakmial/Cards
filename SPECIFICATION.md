@@ -21,3 +21,18 @@ Add modules that specify number of human / bot players and game types, Deck .dea
 * Class Deck initializes with one Card per combination of rank [ 2 - "A" ] and suit ["H", "S", "C", "D"]. 
 * Class Deck provides .shuffle which randomizes card order in Deck.
 * CLI manages basic interface with user.
+
+_BONUS ROUND_
+MVP is finished with a couple hours to spare, let's spec out some more features!
+
+* Add Card.name, a Hash that builds a full written name (eg "Ace of Clubs") from the symbolic .value ("AC")
+* Add Class Hand, which initializes an array @current_hand that hold cards from Deck.draw. 
+* Class Hand has .get for current_hand which reads out your current_hand with full written name and hand position, like:
+"
+1: 10 of Spades
+2: Jack of Hearts
+"
+* Add method .discard(current_hand[i+1]) to throw the chosen card into the ether.
+* Add class Table as a library for statics, such as .compare(card_1,card_2) to determine which is higher.
+  - Table can be extended later with modules to represent game surface locations and contain game rules.
+* Add method Hand.sort
