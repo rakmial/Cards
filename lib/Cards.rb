@@ -45,3 +45,12 @@ class Deck
     self
   end
 end
+
+class Hand
+  attr_accessor(:current_hand)
+
+  def initialize
+    @current_hand = []
+  end
+
+end
