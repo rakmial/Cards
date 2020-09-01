@@ -45,4 +45,7 @@ describe("Hand") do
   it('initializes with attr_accessor :current_hand, an array to store cards .draw(n) from Deck') do
     expect(Hand.new.current_hand).to(eq([]))
   end
+  it('provides its own .draw method, which calls Deck.draw and adds returned card to @current_hand') do
+    expect(Hand.new.draw(Deck.new).current_hand[0].value).to(eq("2H")) #"2H" is first card of unshuffled new Deck
+  end
 end
