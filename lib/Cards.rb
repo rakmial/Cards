@@ -16,7 +16,11 @@ class Deck
   
   def initialize
     @card_array = []
-    52.times {@card_array.append(Card.new(2,"H"))}
+    for suit in %w(H S D C) do
+      for rank in ((2..10).to_a + %w(J Q K A)) do
+        @card_array.append(Card.new(rank,suit))
+      end
+    end
     @count = @card_array.length
   end
 
