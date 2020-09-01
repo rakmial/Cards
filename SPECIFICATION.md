@@ -21,10 +21,3 @@ Add modules that specify number of human / bot players and game types, Deck .dea
 * Class Deck initializes with one Card per combination of rank [ 2 - "A" ] and suit ["H", "S", "C", "D"]. 
 * Class Deck provides .shuffle which randomizes card order in Deck.
 * CLI manages basic interface with user.
-
-### _Specs for Specs_
-1. Plain English specs were committed in a text file or README before coding.
-2. Specs include specific input and output values and a descriptive sentence.
-3. Specs begin with the simplest possible behavior and progress to more complex cases, covering different input values.
-4. All specs are translated correctly as test methods.
-All tests are passing, and described functionality is present.

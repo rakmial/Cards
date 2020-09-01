@@ -28,4 +28,9 @@ class Deck
     @count = @card_array.length - 1
     @card_array.pop
   end
+
+  def shuffle
+    @card_array = @card_array.shuffle
+    self
+  end
 end
