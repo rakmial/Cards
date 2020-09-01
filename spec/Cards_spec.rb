@@ -18,6 +18,13 @@ describe("Deck") do
     test_deck = Deck.new
     expect(test_deck.draw.class).to(eq(Card))
     expect(test_deck.count).to(eq(51))
-  # [2..10] + ["J","Q","K","A"] for each suit ["H","S","C","D"]
+  end
+  it('initializes with one Card for each combination of suit and rank') do
+    test_deck = Deck.new
+    for suit in %w(H S D C) do
+      for rank in ((2..10).to_a.map(&:to_s) + %w(J Q K A)) do
+        expect(test_deck.draw.value).to(eq(rank+suit))
+      end
+    end
   end
 end

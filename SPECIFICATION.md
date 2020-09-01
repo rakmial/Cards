@@ -16,8 +16,9 @@ Add modules that specify number of human / bot players and game types, Deck .dea
 ### _Tests & Functions_
 
 * Class Card must have attr_reader for @suit and @rank.
-* Class Deck must initialize with 52 cards - ranks [ 2 - "A" ] for each suit ["H", "S", "C", "D"]. 
+* Class Deck must initialize with 52 cards and provides reader attr :count that returns number of cards remaining.
 * Class Deck provides .draw which basically .pops the top card (return and remove).
+* Class Deck initializes with one Card per combination of rank [ 2 - "A" ] and suit ["H", "S", "C", "D"]. 
 * Class Deck provides .shuffle which randomizes card order in Deck.
 * CLI manages basic interface with user.
 
