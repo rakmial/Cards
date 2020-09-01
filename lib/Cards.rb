@@ -13,11 +13,12 @@ class Card
   end
   
   def value_to_name(card_value)
-    rank_names = { 2 => "Two", 3 => "Three", 4 => "Four", 5 => "Five", 6 => "Six", \
-                   7 => "Seven", 8 => "Eight", 9 => "Nine", 1 => "Ten" }
+    rank_names = { "2" => "Two", "3" => "Three", "4" => "Four", "5" => "Five", "6" => "Six", \
+                   "7" => "Seven", "8" => "Eight", "9" => "Nine", "1" => "Ten", "J" => "Jack", \
+                   "Q" => "Queen", "K" => "King", "A" => "Ace" }
   
     suit_names = { "H" => "Hearts", "C" => "Clubs", "D" => "Diamonds", "S" => "Spades" }
-    [rank_names[card_value[0].to_i], "of", suit_names[card_value[-1]]].join(" ")
+    [rank_names[card_value[0]], "of", suit_names[card_value[-1]]].join(" ")
   end
     
 end
@@ -47,10 +48,14 @@ class Deck
 end
 
 class Hand
-  attr_accessor(:current_hand)
+  attr_reader(:current_hand)
 
   def initialize
     @current_hand = []
   end
 
+  def draw(deck_obj)
+    @current_hand = @current_hand.append(deck_obj.draw)
+    self
+  end
 end
