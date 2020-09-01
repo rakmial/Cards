@@ -8,6 +8,9 @@ describe("Card") do
     expect(Card.new(2,"H").rank).to(eq(2))
     expect(Card.new(2,"H").value).to(eq("2H"))
   end
+  it('initializes with a @name built from value and a Hash containing written words, provides reader :name') do
+    expect(Card.new(2,"H").name).to(eq("Two of Hearts"))
+  end
 end
 
 describe("Deck") do
@@ -36,5 +39,4 @@ describe("Deck") do
     52.times {test_nonrandom.append(test_deck_2.draw)}
     expect(test_random).not_to(eq(test_nonrandom))
   end
-
 end
