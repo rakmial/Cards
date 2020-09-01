@@ -11,5 +11,10 @@ class Card
 end
 
 class Deck
-
+  attr_reader(:count)
+  def initialize
+    @card_array = []
+    52.times {@card_array.append(Card.new(2,"H"))}
+    @count = @card_array.length   
+  end
 end
