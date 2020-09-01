@@ -10,3 +10,9 @@ describe("Card") do
   end
 end
 
+describe("Deck") do
+  it('initializes with 52 cards, provides .count method to return number of cards remaining') do
+    expect(Deck.new.count).to(eq(52))
+  end
+  # [2..10] + ["J","Q","K","A"] for each suit ["H","S","C","D"]
+end

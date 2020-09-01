@@ -9,7 +9,7 @@ MVP - Describe a class for a typical playing card and a class for a deck. Ensure
 
 Additional potential features - 
 
-Provide for comparison of rank between card objects (ie "A" > "K" > "Q" > "J" > 10). 
+Provide for comparison of rank between card objects (ie "A" > "K" > "Q" > "J" > 10, option for Ace-low). 
 Add class Hand and class Table (contains Discard, essentially inherits from Deck but with readers?) with sensible functionalities.
 Add modules that specify number of human / bot players and game types, Deck .deal opening hand for that game type to each player.
 
