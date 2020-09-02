@@ -50,6 +50,7 @@ describe("Hand") do
     expect(test_hand.current_hand[0].value).to(eq("AC")) #"AC" is first card of unshuffled new Deck
   end
   it('provides a .discard method which accepts card .value to determine which card to remove') do
-    expect(Hand.new.draw(Deck.new).discard("AC").current_hand).to(eq([]))
+    test_deck = Deck.new
+    expect(Hand.new.draw(test_deck).draw(test_deck).discard("AC").current_hand[0].value).to(eq("KC"))
   end
 end

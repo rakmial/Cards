@@ -58,4 +58,13 @@ class Hand
     @current_hand = @current_hand.append(deck_obj.draw)
     self
   end
+
+  def discard(card_value)
+    @current_hand.each do |card|
+      if card.value == card_value
+        @current_hand.delete(card)
+      end
+    end
+    self
+  end
 end
